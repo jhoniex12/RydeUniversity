@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ryde University Student Records Web Application
 
 A scalable, high-performance web application for managing student admission records, designed to run on AWS infrastructure with MySQL 8.0 database.
@@ -421,3 +422,6 @@ For issues or questions, contact: IT Support <support@ryde.university.edu.au>
 ---
 
 **Note:** This application is designed to work with the AWS architecture described in `AWS_Architecture_Design_Solution.md`. Ensure all AWS resources (VPC, RDS, EC2, ALB) are properly configured before deployment.
+=======
+# RydeUniversity
+>>>>>>> 04f82911cd3e489d35f4b2e98a85678e8c30fe4f
