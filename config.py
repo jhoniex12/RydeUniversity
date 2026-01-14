@@ -3,6 +3,9 @@ Configuration file for Ryde University Student Records Application
 """
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv()  # loads .env from project root
 
 
 class Config:

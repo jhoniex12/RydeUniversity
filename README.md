@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 # Ryde University Student Records Web Application
 
 A scalable, high-performance web application for managing student admission records, designed to run on AWS infrastructure with MySQL 8.0 database.
@@ -36,11 +37,13 @@ This application is designed to run in the AWS architecture specified in `AWS_Ar
 ## Prerequisites
 
 ### For Local Development:
+
 - Python 3.9 or higher
 - MySQL 8.0
 - pip (Python package manager)
 
 ### For AWS Production Deployment:
+
 - AWS Account with appropriate permissions
 - RDS MySQL 8.0 instance (Multi-AZ)
 - EC2 instances with Python 3.9+
@@ -140,25 +143,26 @@ The application will be available at: http://localhost:5000
 
 ### REST API
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/students` | Get all students |
-| GET | `/api/students/<id>` | Get student by ID |
-| POST | `/api/students` | Add new student |
-| PUT | `/api/students/<id>` | Update student |
-| DELETE | `/api/students/<id>` | Delete student |
-| GET | `/health` | Health check for ALB |
+| Method | Endpoint             | Description          |
+| ------ | -------------------- | -------------------- |
+| GET    | `/api/students`      | Get all students     |
+| GET    | `/api/students/<id>` | Get student by ID    |
+| POST   | `/api/students`      | Add new student      |
+| PUT    | `/api/students/<id>` | Update student       |
+| DELETE | `/api/students/<id>` | Delete student       |
+| GET    | `/health`            | Health check for ALB |
 
 ### Web Pages
 
-| Route | Description |
-|-------|-------------|
-| `/` | Home page with student list |
+| Route       | Description                    |
+| ----------- | ------------------------------ |
+| `/`         | Home page with student list    |
 | `/students` | Students list page with search |
 
 ### API Examples
 
 **Add Student:**
+
 ```bash
 curl -X POST http://localhost:5000/api/students \
   -H "Content-Type: application/json" \
@@ -173,6 +177,7 @@ curl -X POST http://localhost:5000/api/students \
 ```
 
 **Update Student:**
+
 ```bash
 curl -X PUT http://localhost:5000/api/students/1 \
   -H "Content-Type: application/json" \
@@ -187,11 +192,13 @@ curl -X PUT http://localhost:5000/api/students/1 \
 ```
 
 **Delete Student:**
+
 ```bash
 curl -X DELETE http://localhost:5000/api/students/1
 ```
 
 **Health Check:**
+
 ```bash
 curl http://localhost:5000/health
 ```
@@ -209,7 +216,7 @@ CREATE TABLE students (
     phone VARCHAR(20) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    
+
     INDEX idx_name (name),
     INDEX idx_email (email),
     INDEX idx_city (city)
@@ -349,6 +356,7 @@ sudo systemctl status ryde-app
 ### AWS CloudWatch Integration
 
 Monitor these metrics:
+
 - EC2 CPU utilization
 - Database connections
 - Request count (from ALB)
@@ -357,6 +365,7 @@ Monitor these metrics:
 ### Logging
 
 Application logs to stdout (captured by CloudWatch Logs):
+
 - Database connection events
 - CRUD operations
 - Errors and exceptions
@@ -421,7 +430,8 @@ For issues or questions, contact: IT Support <support@ryde.university.edu.au>
 
 ---
 
-**Note:** This application is designed to work with the AWS architecture described in `AWS_Architecture_Design_Solution.md`. Ensure all AWS resources (VPC, RDS, EC2, ALB) are properly configured before deployment.
-=======
+# **Note:** This application is designed to work with the AWS architecture described in `AWS_Architecture_Design_Solution.md`. Ensure all AWS resources (VPC, RDS, EC2, ALB) are properly configured before deployment.
+
 # RydeUniversity
->>>>>>> 04f82911cd3e489d35f4b2e98a85678e8c30fe4f
+
+> > > > > > > 04f82911cd3e489d35f4b2e98a85678e8c30fe4f
